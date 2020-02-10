@@ -1,0 +1,35 @@
+body {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  padding: 50px;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  padding: 30px;
+  box-sizing: border-box;
+  background-color: yellow;
+  border: 0.5px solid #dadada;
+  position: relative;
+}
+
+button {
+  margin: 0 auto;
+}
+
+#target::before {
+  content: "event.target";
+  position: absolute;
+  top: -25px;
+}
+
+#currentTarget::before {
+  content: "event.currentTarget";
+  position: absolute;
+  top: -25px;
+}
